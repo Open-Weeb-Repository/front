@@ -1,0 +1,6 @@
+.img-wrapper{
+  overflow: hidden;
+}
+.img-wrapper img{
+  width: 100%;
+}

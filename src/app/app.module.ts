@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SeriesListItemComponent } from './series/series-list-item/series-list-item.component';
 import {HttpClientModule} from '@angular/common/http';
+import { SeriesDetailComponent } from './series/series-detail/series-detail.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {HttpClientModule} from '@angular/common/http';
     HeaderComponent,
     HomeComponent,
     SeriesListItemComponent,
+    SeriesDetailComponent,
   ],
   imports: [
     BrowserModule,
