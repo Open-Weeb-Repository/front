@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
-import {ISeriesListResponse} from './series.types';
+import {ISeries, ISeriesListResponse} from './series.types';
 import {Observable, Subject} from 'rxjs';
 
 const APIURL = `${environment.apiurl}/series`;
@@ -27,5 +27,9 @@ export class SeriesService {
 
   getSeriesListUpdatedListener(): Observable<ISeriesListResponse>{
     return this.seriesListUpdated.asObservable();
+  }
+
+  getSeriesDetail(id: string): Observable<ISeries>{
+    return this.http.get<ISeries>(`${APIURL}/${id}`);
   }
 }
