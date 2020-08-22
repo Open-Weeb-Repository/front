@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center" *ngIf="isLoading">
+  <div class="spinner-border m-5" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+<div class="d-flex justify-content-between align-items-stretch flex-wrap" *ngIf="!isLoading">
+  <app-series-list-item *ngFor="let series of animeSeries" [series]="series"></app-series-list-item>
+</div>
+<div class="d-flex justify-content-center" *ngIf="totalSeries > perpage">
+  <ngb-pagination
+    [page]="page"
+    [pageSize]="perpage"
+    [collectionSize]="totalSeries"
+    (pageChange)="changePage($event)"></ngb-pagination>
+</div>
+
