@@ -24,7 +24,7 @@
   </div>
   <div class="mt-2">
     <h2>DL/Stream</h2>
-    <table class="table table-borderless table-hover">
+    <table *ngIf="projectList.length > 0" class="table table-borderless table-hover">
       <thead>
       <tr>
         <th>Name</th>
@@ -50,5 +50,8 @@
       </tr>
       </tbody>
     </table>
+    <div *ngIf="projectList.length < 1" class="alert alert-danger">
+      Not Found
+    </div>
   </div>
 </div>
