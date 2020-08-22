@@ -16,6 +16,14 @@
   cursor: pointer;
 }
 
+.series-subtitle{
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.7em;
+}
+
 .series-title{
   cursor: pointer;
   overflow: hidden;
